@@ -17,7 +17,9 @@ EEEEEE белый --*/
   --button-background: #f5f4fa;
   --border-color: #eee;
   --header-line-color: #ececec;
-
+  --clients-icon-color: #afb1b8;
+  --gradient-color: rgba(47, 48, 58, 0.4);
+  --icon-background: rgba(255, 255, 255, 0.1);
   --indent: 30px;
   --items: 4;
 }
@@ -92,8 +94,6 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  padding-bottom: 32px;
-  padding-top: 32px;
 }
 
 .site-nav {
@@ -123,19 +123,35 @@ body {
   font-size: 14px;
   letter-spacing: 0.02em;
   display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .nav-contact {
+  display: flex;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
-  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
+
+.nav-contact:hover .contact-icons,
+.nav-contact:focus .contact-icons {
+  fill: var(--accent-text-color-blue);
+}
+
 .contact-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: auto;
+}
+.contact-icons {
+  display: block;
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
 }
 
 .nav-link:hover,
@@ -149,6 +165,16 @@ body {
 /* Секция Hero  */
 .hero {
   background-color: var(--background-color);
+  background-image: linear-gradient(
+      to top,
+      var(--gradient-color),
+      var(--gradient-color)
+    ),
+    url(../images/people.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -179,6 +205,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 4px;
+  border-color: var(--accent-text-color-blue);
 }
 
 .visually-hidden {
@@ -196,7 +224,18 @@ body {
 .features {
   padding-bottom: 0px;
 }
-
+.icon-holder {
+  background-color: var(--button-background);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+.features-icons {
+  fill: var(--primary-text-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .features-list {
   display: flex;
 }
@@ -226,8 +265,10 @@ body {
   padding-right: 0px;
   --items: 3;
 }
+
 .activities-title,
-.team-title {
+.team-title,
+.clients-title {
   font-size: 36px;
   text-align: center;
   margin-bottom: 50px;
@@ -265,6 +306,10 @@ body {
 }
 .staff-item {
   background-color: var(--white-text-color);
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .staff-nick {
@@ -281,8 +326,85 @@ body {
 
 .staff-name {
   text-align: center;
-  padding: 30px;
+  padding: 30px 10px;
 }
+.social-group {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: center;
+}
+.social-list {
+  margin: 2 px;
+}
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--icon-background);
+  margin-right: 10px;
+}
+/* box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.3);
+ } */
+
+.social-icons {
+  fill: var(--clients-icon-color);
+}
+.social-link:hover .social-icons,
+.social-link:focus .social-icons {
+  fill: var(--white-text-color);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-text-color-blue);
+}
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+}
+.clients-item:last-child {
+  margin-right: 0px;
+}
+
+.clients-item {
+  display: flex;
+  margin-right: 30px;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px var(--clients-icon-color) solid;
+}
+.clients-link {
+  width: 100%;
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.clients-icons {
+  fill: var(--clients-icon-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-item:hover .clients-icons,
+.clients-item:focus .clients-icons {
+  fill: var(--accent-text-color-blue);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--accent-text-color-blue);
+}
+
 .footer {
   background-color: var(--background-color);
   padding-top: 60px;
@@ -291,6 +413,53 @@ body {
 
 .footer .logo .text-white {
   color: var(--white-text-color);
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-right: 0;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-right {
+  margin-left: 70px;
+}
+.right-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white-text-color);
+}
+.right-group {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.right-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--icon-background);
+  margin-right: 10px;
+}
+.right-group:last-child {
+  margin-right: 0px;
+}
+
+.footer-icons {
+  fill: var(--white-text-color);
+}
+.right-link:hover,
+.right-link:focus {
+  background-color: var(--accent-text-color-blue);
 }
 
 .link-address,
@@ -349,27 +518,37 @@ body {
   flex-basis: calc((100% - 30px * 3) / 3);
   margin-right: 30px;
   margin-top: 30px;
+  background: #ffffff;
 }
 /* 
 .works-item:nth-child(3n) {
   margin-right: -30px;
 } */
 
+.works-link {
+  display: block;
+}
+
+.works-link:hover,
+.works-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .works-title {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 18px;
   color: var(--primary-text-color);
   margin-bottom: 4px;
+  font-weight: 700;
 }
 
 .works-text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 16px;
   font-weight: 400;
   color: var(--secondary-text-color);
+  line-height: 2.7;
 }
+
 .text-wrap {
   padding-left: 24px;
   padding-right: 24px;
@@ -379,11 +558,7 @@ body {
   border-left: 1px var(--border-color) solid;
   border-right: 1px var(--border-color) solid;
 }
+
 .filter.section {
   padding-bottom: 94px;
-}
-.footer .logo {
-  margin-bottom: 20px;
-  display: inline-block;
-  margin-right: 0;
 }
