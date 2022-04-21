@@ -227,10 +227,12 @@ body {
 .icon-holder {
   background-color: var(--button-background);
   display: flex;
+  height: 120px;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .features-icons {
   fill: var(--primary-text-color);
   display: block;
