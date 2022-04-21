@@ -444,7 +444,7 @@ body {
   margin-right: 10px;
 }
 
-.right-group:last-child {
+.right-list:last-child {
   margin-right: 0px;
 }
 
@@ -502,6 +502,7 @@ body {
   background: var(--button-background);
   padding: 6px 22px 6px 22px;
   border-radius: 4px;
+  display: block;
 }
 
 .button-filter:hover,
@@ -509,7 +510,14 @@ body {
 .button-filter:active {
   color: var(--white-text-color);
   background-color: var(--accent-text-color-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+/* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 4px; */
+
 .works {
   display: flex;
   align-items: center;
