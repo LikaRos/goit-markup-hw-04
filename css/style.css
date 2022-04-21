@@ -233,12 +233,6 @@ body {
   margin-bottom: 30px;
 }
 
-.features-icons {
-  fill: var(--primary-text-color);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 .features-list {
   display: flex;
 }
@@ -340,6 +334,10 @@ body {
 .social-list {
   margin-right: 10px;
 }
+.social-list:last-child {
+  margin-right: 0px;
+}
+
 .social-link {
   width: 44px;
   height: 44px;
@@ -394,8 +392,6 @@ body {
 .clients-icons {
   fill: var(--clients-icon-color);
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .clients-item:hover .clients-icons,
